@@ -88,7 +88,7 @@ Pre-configured collections of bundles organized by role or workflow:
 
 ## Using This Hub
 
-### For End Users (Amadeus Engineers)
+### For End Users
 
 1. **Install the Prompt Registry Extension** in VS Code
 2. **Add This Hub**:
@@ -257,7 +257,7 @@ For issues or questions:
 
 - [Prompt Registry Extension](https://github.com/AmadeusITGroup/prompt-registry)
 - [GitHub Awesome Copilot](https://github.com/github/awesome-copilot)
-- [Hub Configuration Schema](./schemas/hub-config.schema.json) *(if available)*
+- [Hub Configuration Schema](./schemas/hub-config.schema.json)
 
 ## License
 
