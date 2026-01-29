@@ -4,6 +4,22 @@ metadata:
   description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
   updatedAt: '2025-11-29T22:02:24.607Z'
+engagement:
+  enabled: true
+  backend:
+    type: github-discussions
+    repository: AmadeusITGroup/.prompt-registry-engagement
+  telemetry:
+    enabled: false
+    anonymize: true
+  ratings:
+    enabled: true
+    ratingsUrl: https://raw.githubusercontent.com/AmadeusITGroup/.prompt-registry-engagement/main/ratings.json
+  feedback:
+    enabled: true
+    requireRating: false
+    maxLength: 2000
+    feedbackUrl: https://raw.githubusercontent.com/AmadeusITGroup/.prompt-registry-engagement/main/feedbacks.json
 sources:
 - id: awesome-copilot-official
   name: Awesome Copilot (Official)
