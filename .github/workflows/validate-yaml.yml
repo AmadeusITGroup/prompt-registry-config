@@ -1,0 +1,45 @@
+name: Validate Hub Configuration
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '.config/yamllint'
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '.config/yamllint'
+
+jobs:
+  validate:
+    name: Validate YAML and Schema
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+
+      - name: Install validation tools
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install yamllint check-jsonschema
+          echo "$PWD/.venv/bin" >> "$GITHUB_PATH"
+
+      - name: Check YAML syntax
+        id: yamllint
+        if: always()
+        run: yamllint -c .config/yamllint .
+
+      - name: Validate hub-config against schema
+        id: schema
+        if: always()
+        run: >
+          check-jsonschema
+          --schemafile "https://raw.githubusercontent.com/AmadeusITGroup/prompt-registry/refs/heads/main/schemas/hub-config.schema.json"
+          hub-config.yml
