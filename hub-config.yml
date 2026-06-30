@@ -1,39 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/AmadeusITGroup/prompt-registry/refs/heads/main/schemas/hub-config.schema.json
 version: 1.0.0
 metadata:
   name: Awesome Copilot Hub
   description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
   updatedAt: '2025-11-29T22:02:24.607Z'
-# engagement:
-#   enabled: true
-#   backend:
-#     type: github-discussions
-#     repository: AmadeusITGroup/.prompt-registry-engagement
-#   telemetry:
-#     enabled: false
-#     anonymize: true
-#   ratings:
-#     enabled: true
-#     ratingsUrl: https://raw.githubusercontent.com/AmadeusITGroup/.prompt-registry-engagement/main/ratings.json
-#   feedback:
-#     enabled: true
-#     requireRating: false
-#     maxLength: 2000
-#     feedbackUrl: https://raw.githubusercontent.com/AmadeusITGroup/.prompt-registry-engagement/main/feedbacks.json
 sources:
-- id: awesome-copilot-official
-  name: Awesome Copilot (Official)
-  type: awesome-copilot
-  url: https://github.com/github/awesome-copilot
-  enabled: true
-  priority: 1
-  metadata:
-    description: Official Awesome Copilot collections from GitHub
-    homepage: https://github.com/github/awesome-copilot
-  config:
-    branch: main
-    collectionsPath: collections
-
 - id: awesome-copilot-skills-official
   name: Awesome Copilot Skills (Official)
   type: skills
@@ -43,6 +15,15 @@ sources:
   metadata:
     description: Official Awesome Copilot Skills from GitHub
     homepage: https://github.com/github/awesome-copilot/skills
+- id: anthropic-skills-official
+  name: Anthropic Skills (Official)
+  type: skills
+  url: https://github.com/anthropics/skills/skills
+  enabled: true
+  priority: 20
+  metadata:
+    description: Official Agent Skills from Anthropic
+    homepage: https://github.com/anthropics/skills/skills
 
 profiles:
 # Roles
@@ -52,18 +33,6 @@ profiles:
   icon: "🌐"
   path: ["Roles"]
   bundles:
-  - id: frontend-web-dev
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: testing-automation
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: security-best-practices
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-webapp-testing
     version: latest
     source: awesome-copilot-skills-official
@@ -80,68 +49,23 @@ profiles:
     version: latest
     source: awesome-copilot-skills-official
     required: true
-
-- id: backend-developer
-  name: Backend Developer
-  description: Backend development across multiple languages including databases and security
-  icon: "⚙️"
-  path: ["Roles"]
-  bundles:
-  - id: java-development
+  - id: skills-anthropics-skills-frontend-design
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: python-general
+  - id: skills-anthropics-skills-web-artifacts-builder
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: csharp-dotnet-development
+  - id: skills-anthropics-skills-canvas-design
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: database-data-management
+  - id: skills-anthropics-skills-theme-factory
     version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: security-best-practices
-    version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
 
-- id: full-stack-developer
-  name: Full Stack Developer
-  description: Complete full-stack development toolkit
-  icon: "🔄"
-  path: ["Roles"]
-  bundles:
-  - id: frontend-web-dev
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: java-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: python-general
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: csharp-dotnet-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: database-data-management
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: testing-automation
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: security-best-practices
-    version: latest
-    source: awesome-copilot-official
-    required: true
 
 - id: devops-engineer
   name: DevOps Engineer
@@ -149,22 +73,6 @@ profiles:
   icon: "🚀"
   path: ["Roles"]
   bundles:
-  - id: devops-oncall
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: azure-cloud-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: pcf-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: security-best-practices
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-appinsights-instrumentation
     version: latest
     source: awesome-copilot-skills-official
@@ -204,21 +112,13 @@ profiles:
   icon: "🤖"
   path: ["Roles"]
   bundles:
-  - id: ai-edge-tasks
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: python-general
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: python-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-agentic-eval
     version: latest
     source: awesome-copilot-skills-official
+    required: true
+  - id: skills-anthropics-skills-claude-api
+    version: latest
+    source: anthropic-skills-official
     required: true
 
 - id: mcp-developer
@@ -227,89 +127,49 @@ profiles:
   icon: "🔗"
   path: ["Roles"]
   bundles:
-  - id: typescript-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: python-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: java-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: csharp-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: go-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: rust-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: ruby-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: swift-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: kotlin-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: php-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-mcp-cli
     version: latest
     source: awesome-copilot-skills-official
     required: true
+  - id: skills-anthropics-skills-mcp-builder
+    version: latest
+    source: anthropic-skills-official
+    required: true
 
-- id: openapi-developer
-  name: OpenAPI Developer
-  description: OpenAPI specification code generation across languages
-  icon: "📄"
+- id: designer-creative
+  name: Designer / Creative
+  description: UI/UX design, branding, theming, and generative visual art
+  icon: "🎨"
   path: ["Roles"]
   bundles:
-  - id: openapi-to-application-nodejs-nestjs
+  - id: skills-anthropics-skills-frontend-design
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: openapi-to-application-python-fastapi
+  - id: skills-anthropics-skills-canvas-design
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: openapi-to-application-java-spring-boot
+  - id: skills-anthropics-skills-brand-guidelines
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: openapi-to-application-csharp-dotnet
+  - id: skills-anthropics-skills-theme-factory
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: openapi-to-application-go
+  - id: skills-anthropics-skills-algorithmic-art
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-slack-gif-creator
+    version: latest
+    source: anthropic-skills-official
     required: true
 
+
+
 # Domains
-- id: security-specialist
-  name: Security Specialist
-  description: Security best practices and compliance
-  icon: "🔒"
-  path: ["Domains"]
-  bundles:
-  - id: security-best-practices
-    version: latest
-    source: awesome-copilot-official
-    required: true
 
 - id: testing-specialist
   name: Testing Specialist
@@ -317,10 +177,6 @@ profiles:
   icon: "🧪"
   path: ["Domains"]
   bundles:
-  - id: testing-automation
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-chrome-devtools
     version: latest
     source: awesome-copilot-skills-official
@@ -329,6 +185,10 @@ profiles:
     version: latest
     source: awesome-copilot-skills-official
     required: true
+  - id: skills-anthropics-skills-webapp-testing
+    version: latest
+    source: anthropic-skills-official
+    required: true
 
 - id: ai-specialist
   name: AI Specialist
@@ -336,13 +196,48 @@ profiles:
   icon: "🤖"
   path: ["Domains"]
   bundles:
-  - id: ai-edge-tasks
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-agentic-eval
     version: latest
     source: awesome-copilot-skills-official
+    required: true
+  - id: skills-anthropics-skills-claude-api
+    version: latest
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-mcp-builder
+    version: latest
+    source: anthropic-skills-official
+    required: true
+
+- id: document-content-specialist
+  name: Document & Content Specialist
+  description: Authoring and processing documents, spreadsheets, presentations, and internal communications
+  icon: "📄"
+  path: ["Domains"]
+  bundles:
+  - id: skills-anthropics-skills-docx
+    version: latest
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-xlsx
+    version: latest
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-pptx
+    version: latest
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-pdf
+    version: latest
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-doc-coauthoring
+    version: latest
+    source: anthropic-skills-official
+    required: true
+  - id: skills-anthropics-skills-internal-comms
+    version: latest
+    source: anthropic-skills-official
     required: true
 
 - id: database-specialist
@@ -351,10 +246,6 @@ profiles:
   icon: "🗄️"
   path: ["Domains"]
   bundles:
-  - id: database-data-management
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-snowflake-semanticview
     version: latest
     source: awesome-copilot-skills-official
@@ -366,26 +257,6 @@ profiles:
   icon: "📋"
   path: ["Domains"]
   bundles:
-  - id: project-planning
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: technical-spike
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: cast-imaging
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: software-engineering-team
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: structured-autonomy-collection
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-azure-resource-visualizer
     version: latest
     source: awesome-copilot-skills-official
@@ -422,18 +293,6 @@ profiles:
   icon: "🟨"
   path: ["Languages"]
   bundles:
-  - id: frontend-web-dev
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: openapi-to-application-nodejs-nestjs
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: typescript-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-chrome-devtools
     version: latest
     source: awesome-copilot-skills-official
@@ -446,44 +305,15 @@ profiles:
     version: latest
     source: awesome-copilot-skills-official
     required: true
-
-- id: python-developer
-  name: Python Developer
-  description: General Python development, MCP, and OpenAPI
-  icon: "🐍"
-  path: ["Languages"]
-  bundles:
-  - id: dataverse-sdk-for-python
+  - id: skills-anthropics-skills-frontend-design
     version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
-  - id: python-mcp-development
+  - id: skills-anthropics-skills-web-artifacts-builder
     version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: openapi-to-application-python-fastapi
-    version: latest
-    source: awesome-copilot-official
+    source: anthropic-skills-official
     required: true
 
-- id: java-developer
-  name: Java Developer
-  description: Java development, MCP, and OpenAPI
-  icon: "☕"
-  path: ["Languages"]
-  bundles:
-  - id: java-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: java-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: openapi-to-application-java-spring-boot
-    version: latest
-    source: awesome-copilot-official
-    required: true
 
 - id: csharp-developer
   name: C# Developer
@@ -491,18 +321,6 @@ profiles:
   icon: "🔷"
   path: ["Languages"]
   bundles:
-  - id: csharp-dotnet-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: csharp-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: openapi-to-application-csharp-dotnet
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-nuget-manager
     version: latest
     source: awesome-copilot-skills-official
@@ -516,52 +334,6 @@ profiles:
     source: awesome-copilot-skills-official
     required: true
 
-- id: go-developer
-  name: Go Developer
-  description: Go MCP and OpenAPI development
-  icon: "🔹"
-  path: ["Languages"]
-  bundles:
-  - id: go-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: openapi-to-application-go
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: other-languages
-  name: Other Languages
-  description: MCP development for Rust, Ruby, Swift, Kotlin, PHP, Clojure
-  icon: "🔧"
-  path: ["Languages"]
-  bundles:
-  - id: rust-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: ruby-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: swift-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: kotlin-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: php-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: clojure-interactive-programming
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
 # Platforms
 - id: azure-specialist
   name: Azure Specialist
@@ -569,10 +341,6 @@ profiles:
   icon: "☁️"
   path: ["Platforms"]
   bundles:
-  - id: azure-cloud-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-appinsights-instrumentation
     version: latest
     source: awesome-copilot-skills-official
@@ -612,14 +380,6 @@ profiles:
   icon: "📧"
   path: ["Platforms"]
   bundles:
-  - id: mcp-m365-copilot
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: typespec-m365-copilot
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-microsoft-code-reference
     version: latest
     source: awesome-copilot-skills-official
@@ -635,18 +395,6 @@ profiles:
   icon: "⚡"
   path: ["Platforms"]
   bundles:
-  - id: power-apps-code-apps
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: power-bi-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: power-platform-mcp-connector-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-microsoft-docs
     version: latest
     source: awesome-copilot-skills-official
@@ -659,14 +407,6 @@ profiles:
   icon: "🛠️"
   path: ["Tools"]
   bundles:
-  - id: copilot-sdk
-    version: latest
-    source: awesome-copilot-official
-    required: true
-  - id: partners
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-make-skill-template
     version: latest
     source: awesome-copilot-skills-official
@@ -690,10 +430,6 @@ profiles:
   icon: "⭐"
   path: ["Tools"]
   bundles:
-  - id: awesome-copilot
-    version: latest
-    source: awesome-copilot-official
-    required: true
   - id: skills-github-awesome-copilot-make-skill-template
     version: latest
     source: awesome-copilot-skills-official
