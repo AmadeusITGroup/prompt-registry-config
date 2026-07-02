@@ -4,8 +4,17 @@ metadata:
   name: Awesome Copilot Hub
   description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
-  updatedAt: '2025-11-29T22:02:24.607Z'
+  updatedAt: '2026-07-02T22:02:24.607Z'
 sources:
+- id: community-collections
+  name: Amadeus Community Collections (Official)
+  type: github
+  url: https://github.com/AmadeusITGroup/community-collections
+  enabled: true
+  priority: 10
+  metadata:
+    description: Official Amadeus Community sources for open source collections
+    homepage: https://github.com/AmadeusITGroup/community-collections
 - id: awesome-copilot-skills-official
   name: Awesome Copilot Skills (Official)
   type: skills
@@ -27,6 +36,15 @@ sources:
 
 profiles:
 # Roles
+- id: opensource-contributor
+  name: OpenSource Contributor
+  description: Agentic primitives for Open Source related activities
+  path: ["Roles"]
+  bundles:
+    - id: Amadeus-xDLC-ospo-skills-collection-amadeus-ospo
+      version: latest
+      source: ospo-skills
+      required: true
 - id: frontend-developer
   name: Frontend Developer
   description: Comprehensive frontend development tools including web frameworks, testing, and security
