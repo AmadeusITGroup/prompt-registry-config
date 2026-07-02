@@ -4,451 +4,448 @@ metadata:
   name: Awesome Copilot Hub
   description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
-  updatedAt: '2026-07-02T22:02:24.607Z'
+  updatedAt: "2026-07-02T22:02:24.607Z"
 sources:
-- id: community-collections
-  name: Amadeus Community Collections (Official)
-  type: github
-  url: https://github.com/AmadeusITGroup/community-collections
-  enabled: true
-  priority: 10
-  metadata:
-    description: Official Amadeus Community sources for open source collections
-    homepage: https://github.com/AmadeusITGroup/community-collections
-- id: awesome-copilot-skills-official
-  name: Awesome Copilot Skills (Official)
-  type: skills
-  url: https://github.com/github/awesome-copilot/skills
-  enabled: true
-  priority: 10
-  metadata:
-    description: Official Awesome Copilot Skills from GitHub
-    homepage: https://github.com/github/awesome-copilot/skills
-- id: anthropic-skills-official
-  name: Anthropic Skills (Official)
-  type: skills
-  url: https://github.com/anthropics/skills/skills
-  enabled: true
-  priority: 20
-  metadata:
-    description: Official Agent Skills from Anthropic
-    homepage: https://github.com/anthropics/skills/skills
+  - id: community-collections
+    name: Amadeus Community Collections (Official)
+    type: github
+    url: https://github.com/AmadeusITGroup/community-collections
+    enabled: true
+    priority: 10
+    metadata:
+      description: Official Amadeus Community sources for open source collections
+      homepage: https://github.com/AmadeusITGroup/community-collections
+  - id: awesome-copilot-skills-official
+    name: Awesome Copilot Skills (Official)
+    type: skills
+    url: https://github.com/github/awesome-copilot/skills
+    enabled: true
+    priority: 10
+    metadata:
+      description: Official Awesome Copilot Skills from GitHub
+      homepage: https://github.com/github/awesome-copilot/skills
+  - id: anthropic-skills-official
+    name: Anthropic Skills (Official)
+    type: skills
+    url: https://github.com/anthropics/skills/skills
+    enabled: true
+    priority: 20
+    metadata:
+      description: Official Agent Skills from Anthropic
+      homepage: https://github.com/anthropics/skills/skills
 
 profiles:
-# Roles
-- id: opensource-contributor
-  name: OpenSource Contributor
-  description: Agentic primitives for Open Source related activities
-  path: ["Roles"]
-  bundles:
-    - id: Amadeus-xDLC-ospo-skills-collection-amadeus-ospo
-      version: latest
-      source: ospo-skills
-      required: true
-- id: frontend-developer
-  name: Frontend Developer
-  description: Comprehensive frontend development tools including web frameworks, testing, and security
-  icon: "🌐"
-  path: ["Roles"]
-  bundles:
-  - id: skills-github-awesome-copilot-webapp-testing
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-web-design-reviewer
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-chrome-devtools
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-image-manipulation-image-magick
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-anthropics-skills-frontend-design
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-web-artifacts-builder
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-canvas-design
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-theme-factory
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  # Roles
+  - id: opensource-contributor
+    name: OpenSource Contributor
+    description: Agentic primitives for Open Source related activities
+    icon: ""
+    path: ["Roles"]
+    bundles:
+      - id: AmadeusITGroup-community-collections-amadeus-ospo
+        version: latest
+        source: community-collections
+        required: true
+  - id: frontend-developer
+    name: Frontend Developer
+    description: Comprehensive frontend development tools including web frameworks, testing, and security
+    icon: "🌐"
+    path: ["Roles"]
+    bundles:
+      - id: skills-github-awesome-copilot-webapp-testing
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-web-design-reviewer
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-chrome-devtools
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-image-manipulation-image-magick
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-anthropics-skills-frontend-design
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-web-artifacts-builder
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-canvas-design
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-theme-factory
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
+  - id: devops-engineer
+    name: DevOps Engineer
+    description: DevOps and cloud infrastructure development
+    icon: "🚀"
+    path: ["Roles"]
+    bundles:
+      - id: skills-github-awesome-copilot-appinsights-instrumentation
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-deployment-preflight
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-devops-cli
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-resource-visualizer
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-role-selector
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-static-web-apps
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-gh-cli
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-github-issues
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-- id: devops-engineer
-  name: DevOps Engineer
-  description: DevOps and cloud infrastructure development
-  icon: "🚀"
-  path: ["Roles"]
-  bundles:
-  - id: skills-github-awesome-copilot-appinsights-instrumentation
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-deployment-preflight
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-devops-cli
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-resource-visualizer
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-role-selector
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-static-web-apps
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-gh-cli
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-github-issues
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
+  - id: ai-engineer
+    name: AI Engineer
+    description: AI and machine learning development
+    icon: "🤖"
+    path: ["Roles"]
+    bundles:
+      - id: skills-github-awesome-copilot-agentic-eval
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-anthropics-skills-claude-api
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
-- id: ai-engineer
-  name: AI Engineer
-  description: AI and machine learning development
-  icon: "🤖"
-  path: ["Roles"]
-  bundles:
-  - id: skills-github-awesome-copilot-agentic-eval
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-anthropics-skills-claude-api
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  - id: mcp-developer
+    name: MCP Developer
+    description: Model Context Protocol development across all supported languages
+    icon: "🔗"
+    path: ["Roles"]
+    bundles:
+      - id: skills-github-awesome-copilot-mcp-cli
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-anthropics-skills-mcp-builder
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
-- id: mcp-developer
-  name: MCP Developer
-  description: Model Context Protocol development across all supported languages
-  icon: "🔗"
-  path: ["Roles"]
-  bundles:
-  - id: skills-github-awesome-copilot-mcp-cli
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-anthropics-skills-mcp-builder
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  - id: designer-creative
+    name: Designer / Creative
+    description: UI/UX design, branding, theming, and generative visual art
+    icon: "🎨"
+    path: ["Roles"]
+    bundles:
+      - id: skills-anthropics-skills-frontend-design
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-canvas-design
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-brand-guidelines
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-theme-factory
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-algorithmic-art
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-slack-gif-creator
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
-- id: designer-creative
-  name: Designer / Creative
-  description: UI/UX design, branding, theming, and generative visual art
-  icon: "🎨"
-  path: ["Roles"]
-  bundles:
-  - id: skills-anthropics-skills-frontend-design
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-canvas-design
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-brand-guidelines
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-theme-factory
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-algorithmic-art
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-slack-gif-creator
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  # Domains
 
+  - id: testing-specialist
+    name: Testing Specialist
+    description: Automated testing and QA processes
+    icon: "🧪"
+    path: ["Domains"]
+    bundles:
+      - id: skills-github-awesome-copilot-chrome-devtools
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-webapp-testing
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-anthropics-skills-webapp-testing
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
+  - id: ai-specialist
+    name: AI Specialist
+    description: AI tasks, architecture, and implementation
+    icon: "🤖"
+    path: ["Domains"]
+    bundles:
+      - id: skills-github-awesome-copilot-agentic-eval
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-anthropics-skills-claude-api
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-mcp-builder
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
-# Domains
+  - id: document-content-specialist
+    name: Document & Content Specialist
+    description: Authoring and processing documents, spreadsheets, presentations, and internal communications
+    icon: "📄"
+    path: ["Domains"]
+    bundles:
+      - id: skills-anthropics-skills-docx
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-xlsx
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-pptx
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-pdf
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-doc-coauthoring
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-internal-comms
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
-- id: testing-specialist
-  name: Testing Specialist
-  description: Automated testing and QA processes
-  icon: "🧪"
-  path: ["Domains"]
-  bundles:
-  - id: skills-github-awesome-copilot-chrome-devtools
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-webapp-testing
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-anthropics-skills-webapp-testing
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  - id: database-specialist
+    name: Database Specialist
+    description: Database management and data operations
+    icon: "🗄️"
+    path: ["Domains"]
+    bundles:
+      - id: skills-github-awesome-copilot-snowflake-semanticview
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-- id: ai-specialist
-  name: AI Specialist
-  description: AI tasks, architecture, and implementation
-  icon: "🤖"
-  path: ["Domains"]
-  bundles:
-  - id: skills-github-awesome-copilot-agentic-eval
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-anthropics-skills-claude-api
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-mcp-builder
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  - id: planning-architect
+    name: Planning & Architecture
+    description: Project planning, technical spikes, software analysis, and team engineering
+    icon: "📋"
+    path: ["Domains"]
+    bundles:
+      - id: skills-github-awesome-copilot-azure-resource-visualizer
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-plantuml-ascii
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-prd
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-refactor
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-git-commit
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-github-issues
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-legacy-circuit-mockups
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-- id: document-content-specialist
-  name: Document & Content Specialist
-  description: Authoring and processing documents, spreadsheets, presentations, and internal communications
-  icon: "📄"
-  path: ["Domains"]
-  bundles:
-  - id: skills-anthropics-skills-docx
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-xlsx
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-pptx
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-pdf
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-doc-coauthoring
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-internal-comms
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  # Languages
+  - id: javascript-developer
+    name: JavaScript/TypeScript Developer
+    description: Frontend, backend, and MCP development for JS/TS
+    icon: "🟨"
+    path: ["Languages"]
+    bundles:
+      - id: skills-github-awesome-copilot-chrome-devtools
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-webapp-testing
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-web-design-reviewer
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-anthropics-skills-frontend-design
+        version: latest
+        source: anthropic-skills-official
+        required: true
+      - id: skills-anthropics-skills-web-artifacts-builder
+        version: latest
+        source: anthropic-skills-official
+        required: true
 
-- id: database-specialist
-  name: Database Specialist
-  description: Database management and data operations
-  icon: "🗄️"
-  path: ["Domains"]
-  bundles:
-  - id: skills-github-awesome-copilot-snowflake-semanticview
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
+  - id: csharp-developer
+    name: C# Developer
+    description: C# .NET development, MCP, and OpenAPI
+    icon: "🔷"
+    path: ["Languages"]
+    bundles:
+      - id: skills-github-awesome-copilot-nuget-manager
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-microsoft-code-reference
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-microsoft-docs
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-- id: planning-architect
-  name: Planning & Architecture
-  description: Project planning, technical spikes, software analysis, and team engineering
-  icon: "📋"
-  path: ["Domains"]
-  bundles:
-  - id: skills-github-awesome-copilot-azure-resource-visualizer
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-plantuml-ascii
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-prd
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-refactor
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-git-commit
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-github-issues
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-legacy-circuit-mockups
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
+  # Platforms
+  - id: azure-specialist
+    name: Azure Specialist
+    description: Azure cloud development
+    icon: "☁️"
+    path: ["Platforms"]
+    bundles:
+      - id: skills-github-awesome-copilot-appinsights-instrumentation
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-deployment-preflight
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-devops-cli
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-resource-visualizer
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-role-selector
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-azure-static-web-apps
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-microsoft-code-reference
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-microsoft-docs
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-# Languages
-- id: javascript-developer
-  name: JavaScript/TypeScript Developer
-  description: Frontend, backend, and MCP development for JS/TS
-  icon: "🟨"
-  path: ["Languages"]
-  bundles:
-  - id: skills-github-awesome-copilot-chrome-devtools
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-webapp-testing
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-web-design-reviewer
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-anthropics-skills-frontend-design
-    version: latest
-    source: anthropic-skills-official
-    required: true
-  - id: skills-anthropics-skills-web-artifacts-builder
-    version: latest
-    source: anthropic-skills-official
-    required: true
+  - id: microsoft365-specialist
+    name: Microsoft 365 Specialist
+    description: Microsoft 365 Copilot and TypeSpec development
+    icon: "📧"
+    path: ["Platforms"]
+    bundles:
+      - id: skills-github-awesome-copilot-microsoft-code-reference
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-microsoft-docs
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
+  - id: power-platform-specialist
+    name: Power Platform Specialist
+    description: Power Apps, Power BI, and MCP connectors
+    icon: "⚡"
+    path: ["Platforms"]
+    bundles:
+      - id: skills-github-awesome-copilot-microsoft-docs
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-- id: csharp-developer
-  name: C# Developer
-  description: C# .NET development, MCP, and OpenAPI
-  icon: "🔷"
-  path: ["Languages"]
-  bundles:
-  - id: skills-github-awesome-copilot-nuget-manager
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-microsoft-code-reference
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-microsoft-docs
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
+  # Tools
+  - id: sdk-developer
+    name: SDK Developer
+    description: Copilot SDK and partner integrations
+    icon: "🛠️"
+    path: ["Tools"]
+    bundles:
+      - id: skills-github-awesome-copilot-make-skill-template
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-mcp-cli
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-vscode-ext-commands
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
+      - id: skills-github-awesome-copilot-vscode-ext-localization
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
 
-# Platforms
-- id: azure-specialist
-  name: Azure Specialist
-  description: Azure cloud development
-  icon: "☁️"
-  path: ["Platforms"]
-  bundles:
-  - id: skills-github-awesome-copilot-appinsights-instrumentation
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-deployment-preflight
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-devops-cli
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-resource-visualizer
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-role-selector
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-azure-static-web-apps
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-microsoft-code-reference
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-microsoft-docs
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-
-- id: microsoft365-specialist
-  name: Microsoft 365 Specialist
-  description: Microsoft 365 Copilot and TypeSpec development
-  icon: "📧"
-  path: ["Platforms"]
-  bundles:
-  - id: skills-github-awesome-copilot-microsoft-code-reference
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-microsoft-docs
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-
-- id: power-platform-specialist
-  name: Power Platform Specialist
-  description: Power Apps, Power BI, and MCP connectors
-  icon: "⚡"
-  path: ["Platforms"]
-  bundles:
-  - id: skills-github-awesome-copilot-microsoft-docs
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-
-# Tools
-- id: sdk-developer
-  name: SDK Developer
-  description: Copilot SDK and partner integrations
-  icon: "🛠️"
-  path: ["Tools"]
-  bundles:
-  - id: skills-github-awesome-copilot-make-skill-template
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-mcp-cli
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-vscode-ext-commands
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-  - id: skills-github-awesome-copilot-vscode-ext-localization
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
-
-- id: meta-explorer
-  name: Meta Explorer
-  description: Meta prompts for Copilot discovery and prompt engineering
-  icon: "⭐"
-  path: ["Tools"]
-  bundles:
-  - id: skills-github-awesome-copilot-make-skill-template
-    version: latest
-    source: awesome-copilot-skills-official
-    required: true
+  - id: meta-explorer
+    name: Meta Explorer
+    description: Meta prompts for Copilot discovery and prompt engineering
+    icon: "⭐"
+    path: ["Tools"]
+    bundles:
+      - id: skills-github-awesome-copilot-make-skill-template
+        version: latest
+        source: awesome-copilot-skills-official
+        required: true
