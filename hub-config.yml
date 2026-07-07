@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/AmadeusITGroup/prompt-registry/refs/heads/main/schemas/hub-config.schema.json
 version: 1.0.0
 metadata:
-  name: Awesome Copilot Hub
-  description: A list of agentic primitives curated by Awesome Copilot Community
+  name: RivieraDev Community Hub
+  description: A list of agentic primitives curated by RivieraDev Copilot Community
   maintainer: Waldek Herka
   updatedAt: "2026-07-02T22:02:24.607Z"
 sources:
@@ -33,6 +33,15 @@ sources:
     metadata:
       description: Official Agent Skills from Anthropic
       homepage: https://github.com/anthropics/skills/skills
+  - id: rivieradev-community-collections
+    name: RivieraDev Community Collections
+    type: github
+    url: https://github.com/gblanc-1a/rivieradev-primitive-collection
+    enabled: true
+    priority: 10
+    metadata:
+      description: RivieraDev Community Hub
+      homepage: https://github.com/gblanc-1a/rivieradev-primitive-collection
 
 profiles:
   # Roles
