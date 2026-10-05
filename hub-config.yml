@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/AmadeusITGroup/prompt-registry/refs/heads/main/schemas/hub-config.schema.json
 version: 1.0.0
 metadata:
-  name: Awesome Copilot Hub
+  name: Prompt Registry Community Hub
   description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
-  updatedAt: "2026-07-02T22:02:24.607Z"
+  updatedAt: "2026-10-05T00:00:00.000Z"
 sources:
   - id: community-collections
     name: Amadeus Community Collections (Official)
