@@ -1,10 +1,10 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/AmadeusITGroup/prompt-registry/refs/heads/main/schemas/hub-config.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/AmadeusITGroup/ai-primitives-hub/refs/heads/main/packages/core/src/public/schemas/hub-config.schema.json
 version: 1.0.0
 metadata:
   name: Awesome Copilot Hub
   description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
-  updatedAt: "2026-10-21T00:00:00.000Z"
+  updatedAt: "2026-10-25T10:12:59.108Z"
 sources:
   - id: community-collections
     name: Amadeus Community Collections (Official)
@@ -27,21 +27,21 @@ sources:
   - id: awesome-copilot-skills-official
     name: Awesome Copilot Skills (Official)
     type: skills
-    url: https://github.com/github/awesome-copilot/skills
+    url: https://github.com/github/awesome-copilot
     enabled: true
     priority: 10
     metadata:
       description: Official Awesome Copilot Skills from GitHub
-      homepage: https://github.com/github/awesome-copilot/skills
+      homepage: https://github.com/github/awesome-copilot
   - id: anthropic-skills-official
     name: Anthropic Skills (Official)
     type: skills
-    url: https://github.com/anthropics/skills/skills
+    url: https://github.com/anthropics/skills
     enabled: true
     priority: 20
     metadata:
       description: Official Agent Skills from Anthropic
-      homepage: https://github.com/anthropics/skills/skills
+      homepage: https://github.com/anthropics/skills
 
 profiles:
   # Roles
